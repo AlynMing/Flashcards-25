@@ -9,12 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    
+    @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var questionLabel: UILabel!
+    override func viewDidLoad() { //this is what happened when run the app
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBAction func didTapOnFlashcard(_ sender: Any) {
+        questionLabel.isHidden = true
+    }
 }
 
