@@ -18,7 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var btnOptionOne: UIButton!
     @IBOutlet weak var btnOptionTwo: UIButton!
     @IBOutlet weak var btnOptionThree: UIButton!
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        creationController.flashcardsController = self
+    }
     override func viewDidLoad() { //this is what happened when run the app
         super.viewDidLoad()
         card.layer.cornerRadius = 20.0
@@ -63,7 +67,10 @@ class ViewController: UIViewController {
             answerLabel.isHidden = false
         }
     }
-    
+    func updateFlashcard(question: String, answer: String){
+        questionLabel.text = question
+        answerLabel.text = answer
+    }
     @IBAction func didTapOptionOne(_ sender: Any) {
         btnOptionOne.isHidden = true
     }
@@ -76,4 +83,5 @@ class ViewController: UIViewController {
         btnOptionThree.isHidden = true
     }
 }
+
 
