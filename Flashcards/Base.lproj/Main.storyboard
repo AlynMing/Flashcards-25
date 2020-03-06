@@ -35,6 +35,15 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUF-YY-F5b">
+                                        <rect key="frame" x="220" y="142" width="71" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <state key="normal" title="✏️"/>
+                                        <connections>
+                                            <segue destination="R4c-Og-8q1" kind="presentation" identifier="EditSegue" id="NGc-KK-IKj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <gestureRecognizers/>
@@ -98,7 +107,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="71" y="130"/>
+            <point key="canvasLocation" x="69.565217391304358" y="129.61956521739131"/>
         </scene>
         <!--Creation View Controller-->
         <scene sceneID="7iP-hv-Ocq">
@@ -113,12 +122,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="didTapOnDone:" destination="CwY-Ui-shU" eventType="editingDidEnd" id="PYW-4v-1fW"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Answer" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99Z-V2-PqT">
                                 <rect key="frame" x="70" y="215" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer #1" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8Q-fe-MX1">
+                                <rect key="frame" x="70" y="307" width="275" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Extra Answer #2" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-3B-w8W">
+                                <rect key="frame" x="70" y="398" width="275" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -141,6 +159,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextField" destination="99Z-V2-PqT" id="gfs-vN-L5i"/>
+                        <outlet property="extraAnswer1TextField" destination="s8Q-fe-MX1" id="yXx-Gv-QcK"/>
+                        <outlet property="extraAnswer2TextField" destination="fwk-3B-w8W" id="yHe-1a-TPR"/>
                         <outlet property="questionTextField" destination="9s3-6T-O8N" id="eN4-tW-mNv"/>
                     </connections>
                 </viewController>
@@ -167,4 +187,7 @@
             <point key="canvasLocation" x="928.98550724637687" y="129.61956521739131"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="NGc-KK-IKj"/>
+    </inferredMetricsTieBreakers>
 </document>
