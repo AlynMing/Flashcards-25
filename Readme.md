@@ -1,5 +1,22 @@
 ## Flashcards App
 
+## Lab 2
+
+### App Description
+Now, the Flashcard App allows user to edit their question and answer with two additional incorrect answers as a multiple choice question. Also, if the user leaves the text fields blank, an alert will pop up as a warning. 
+### App Walk-though
+![flashcard](http://g.recordit.co/jl7bOVoeEk.gif)
+
+## Required
+- [x] User can open the creation screen
+- [x] User can cancel out of the creation screen
+- [x] User can enter a new question and answer in the creation screen to then show it on the flashcard
+- [x] Push code to GitHub
+## Optional
+- [x] User gets an error if they try to create a new flashcard with no question or answer
+- [x] User can edit existing flashcard
+- [x] User can add multiple choice answers in the creation screen
+
 ## Lab 1
 
 ### App Description
