@@ -1,5 +1,23 @@
 ## Flashcards App
 
+## Lab 3
+
+### App Description
+Now, Flashcard app allows user to create new flashcard and view the previous flashcard or next flashcard. User can also delete the undesired flashcard.
+
+### App Walk-though
+<img src="http://g.recordit.co/fQatOQ8Sxt.gif" width=200><br>
+
+
+## Required
+- [x] User can browse through multiple flashcards
+- [x] User can re-open the app and see previously created flashcards
+- [x] Push code to GitHub
+## Optional
+- [x] User can delete a flashcard
+- [ ] User can edit existing flashcard
+- [ ] User can store multiple choice questions
+
 ## Lab 2
 
 ### App Description
