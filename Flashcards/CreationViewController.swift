@@ -38,14 +38,19 @@ class CreationViewController: UIViewController {
         let answerText = answerTextField.text
         let extraAnswer1 = extraAnswer1TextField.text
         let extraAnswer2 = extraAnswer2TextField.text
-        // check if empty
+        // See if it's existing
+        var isExisting = false
+        if initialQuestion != nil{
+            isExisting = true
+        }
+        // check if empty, nil means the variable means empty and no value assigned
         if (questionText == nil || answerText == nil || questionText!.isEmpty || answerText!.isEmpty || extraAnswer1 == nil || extraAnswer2 == nil || extraAnswer1!.isEmpty || extraAnswer2!.isEmpty){
             let alert = UIAlertController(title: "Missing Text!", message: "You need to enter both a question and an answer.", preferredStyle: .alert)
             present(alert, animated: true)
             let okAction = UIAlertAction(title: "OK", style: .default)
             alert.addAction(okAction)
         }else{
-            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: extraAnswer1, extraAnswerTwo: extraAnswer2)
+            flashcardsController.updateFlashcard(question: questionText!, answer: answerText!, extraAnswerOne: extraAnswer1, extraAnswerTwo: extraAnswer2, isExisting: isExisting)
             dismiss(animated: true)
         }
     }
